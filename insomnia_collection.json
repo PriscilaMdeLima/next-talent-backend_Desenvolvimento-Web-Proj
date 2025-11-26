@@ -1,0 +1,202 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-11-26T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "req_get_all_programs",
+      "parentId": "fld_programs",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/programs",
+      "name": "Listar Todos os Programas",
+      "description": "Retorna todos os programas cadastrados no sistema",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1700000000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_get_program_by_id",
+      "parentId": "fld_programs",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/programs/{{ _.program_id }}",
+      "name": "Buscar Programa por ID",
+      "description": "Retorna um programa específico pelo ID",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1699999000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_create_program",
+      "parentId": "fld_programs",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/programs",
+      "name": "Criar Novo Programa",
+      "description": "Cria um novo programa no sistema",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Bootcamp de Inteligência Artificial\",\n  \"companyName\": \"AI Academy\",\n  \"type\": \"Bootcamp\",\n  \"deadline\": \"2025-12-31\",\n  \"description\": \"Aprenda os fundamentos de IA e Machine Learning com projetos práticos.\",\n  \"participants\": 150,\n  \"status\": \"open\",\n  \"tags\": [\"dados\", \"backend\"],\n  \"area\": \"Inteligência Artificial\",\n  \"level\": \"Pleno\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1699998000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_update_program",
+      "parentId": "fld_programs",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/programs/{{ _.program_id }}",
+      "name": "Atualizar Programa",
+      "description": "Atualiza os dados de um programa existente",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Bootcamp de IA Avançado\",\n  \"participants\": 200,\n  \"status\": \"closing-soon\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1699997000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_delete_program",
+      "parentId": "fld_programs",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/programs/{{ _.program_id }}",
+      "name": "Deletar Programa",
+      "description": "Remove um programa do sistema",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1699996000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_get_statistics",
+      "parentId": "fld_programs",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/programs/statistics",
+      "name": "Obter Estatísticas",
+      "description": "Retorna estatísticas sobre os programas",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1699995000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_programs",
+      "parentId": "wrk_main",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "name": "Programs",
+      "description": "Endpoints relacionados aos programas de formação",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1700000000000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_main",
+      "parentId": null,
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "name": "Next Talent API",
+      "description": "Collection completa da API Next Talent - Backend de Programas de Formação",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_base",
+      "parentId": "wrk_main",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:3001",
+        "program_id": ""
+      },
+      "dataPropertyOrder": {
+        "&": ["base_url", "program_id"]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1700000000000,
+      "_type": "environment"
+    }
+  ]
+}
